@@ -1,7 +1,23 @@
 /* Netomat brand overrides. PaperMod bundles every file in assets/css/extended/ automatically. */
 
+@font-face {
+    font-family: "Orbitron";
+    src: url("/fonts/Orbitron-500.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
-    --netomat-accent: #1a6faf;
+    /* Brand blue, sampled from the netomat logo */
+    --netomat-accent: #6fa8dc;
+}
+
+/* Site name next to the logo in the header, in the brand font */
+.logo a {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.06em;
 }
 
 /* Portrait / framed images, ported from the mkdocs extra.css img.resize rule */

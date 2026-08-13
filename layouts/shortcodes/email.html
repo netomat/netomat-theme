@@ -1,0 +1,10 @@
+{{- /*
+Obfuscated mailto link (replacement for the mkdocs encriptmail plugin).
+Usage: {{</* email address="website@netomat.io" text="Email us" */>}}
+The address is stored reversed in the DOM and flipped back by JS on click,
+so plain-text scrapers miss it.
+*/ -}}
+{{- $addr := .Get "address" -}}
+{{- $text := .Get "text" | default $addr -}}
+<a href="#" class="obf-email" data-addr="{{ strings.Reverse $addr }}"
+   onclick="this.href='mailto:'+this.dataset.addr.split('').reverse().join('');">{{ $text }}</a>

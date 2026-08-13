@@ -1,0 +1,7 @@
+name = "netomat"
+license = "MIT"
+description = "Netomat brand overrides on top of PaperMod. Use as: theme = ['netomat', 'PaperMod']"
+
+[author]
+  name = "Marcel Reuter"
+  homepage = "https://www.netomat.io/"

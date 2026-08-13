@@ -7,5 +7,6 @@ so plain-text scrapers miss it.
 */ -}}
 {{- $addr := .Get "address" -}}
 {{- $text := .Get "text" | default $addr -}}
-<a href="#" class="obf-email" data-addr="{{ strings.Reverse $addr }}"
+{{- $rev := delimit (collections.Reverse (split $addr "")) "" -}}
+<a href="#" class="obf-email" data-addr="{{ $rev }}"
    onclick="this.href='mailto:'+this.dataset.addr.split('').reverse().join('');">{{ $text }}</a>

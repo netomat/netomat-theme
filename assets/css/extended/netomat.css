@@ -34,3 +34,7 @@ img.resize {
 .logo img {
     border-radius: 4px;
 }
+
+/* Bilder in Artikeln: Klick oeffnet das Bild allein im neuen Tab (render-image.html) */
+.post-content a.img-zoom { box-shadow: none; cursor: zoom-in; }
+.post-content a.img-zoom img { display: block; }
